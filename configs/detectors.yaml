@@ -1,0 +1,13 @@
+yolo:
+  model_path: "models/yolo/door_window.pt"
+  confidence_threshold: 0.25
+
+rtdetr:
+  model_path: "models/rtdetr/door_window.pt"
+  confidence_threshold: 0.25
+
+ensemble:
+  enabled: false
+  merge_method: "nms"
+  iou_threshold: 0.5
+

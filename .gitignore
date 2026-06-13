@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local environment
+.env
+.venv/
+venv/
+env/
+
+# Runtime/generated pipeline state
+.runtime/
+logs/
+outputs/
+runs/
+
+# Datasets and trained/model artifacts are intentionally external.
+# See README.md for setup, download, and training commands.
+datasets/raw/
+datasets/door_window/
+datasets/room_wall/
+models/
+*.pt
+*.pth
+*.onnx
+*.engine
+*.safetensors
+
+# Keep directory placeholders if added later.
+!.gitkeep
+
+# Office/temp files
+~$*
+*.tmp
+*.bak

@@ -1,0 +1,70 @@
+{
+  "objects": [
+    {
+      "id": "gt_room_1",
+      "type": "room",
+      "source": "ground_truth",
+      "geometry_type": "polygon",
+      "geometry": {"points": [[168.0, 144.0], [672.0, 144.0], [672.0, 702.0], [168.0, 702.0]]},
+      "label": "Room 1",
+      "confidence": 1.0
+    },
+    {
+      "id": "gt_room_2",
+      "type": "room",
+      "source": "ground_truth",
+      "geometry_type": "polygon",
+      "geometry": {"points": [[728.0, 144.0], [1232.0, 144.0], [1232.0, 702.0], [728.0, 702.0]]},
+      "label": "Room 2",
+      "confidence": 1.0
+    },
+    {
+      "id": "gt_door_1",
+      "type": "door",
+      "source": "ground_truth",
+      "geometry_type": "bbox",
+      "geometry": {"x1": 658.0, "y1": 252.0, "x2": 756.0, "y2": 297.0},
+      "label": "door",
+      "confidence": 1.0
+    },
+    {
+      "id": "gt_door_2",
+      "type": "door",
+      "source": "ground_truth",
+      "geometry_type": "bbox",
+      "geometry": {"x1": 252.0, "y1": 558.0, "x2": 350.0, "y2": 612.0},
+      "label": "door",
+      "confidence": 1.0
+    },
+    {
+      "id": "gt_window_1",
+      "type": "window",
+      "source": "ground_truth",
+      "geometry_type": "bbox",
+      "geometry": {"x1": 980.0, "y1": 81.0, "x2": 1176.0, "y2": 126.0},
+      "label": "window",
+      "confidence": 1.0
+    },
+    {
+      "id": "gt_window_2",
+      "type": "window",
+      "source": "ground_truth",
+      "geometry_type": "bbox",
+      "geometry": {"x1": 70.0, "y1": 369.0, "x2": 154.0, "y2": 495.0},
+      "label": "window",
+      "confidence": 1.0
+    }
+  ],
+  "quantities": [
+    {"id": "gt_room_area_1", "category": "room_area", "name": "Room 1 area", "quantity": 28.1232, "unit": "m2", "source_object_ids": ["gt_room_1"], "confidence": 1.0},
+    {"id": "gt_room_perimeter_1", "category": "room_perimeter", "name": "Room 1 perimeter", "quantity": 21.24, "unit": "m", "source_object_ids": ["gt_room_1"], "confidence": 1.0},
+    {"id": "gt_room_area_2", "category": "room_area", "name": "Room 2 area", "quantity": 28.1232, "unit": "m2", "source_object_ids": ["gt_room_2"], "confidence": 1.0},
+    {"id": "gt_room_perimeter_2", "category": "room_perimeter", "name": "Room 2 perimeter", "quantity": 21.24, "unit": "m", "source_object_ids": ["gt_room_2"], "confidence": 1.0},
+    {"id": "gt_wall_1", "category": "wall_length", "name": "Wall 1", "quantity": 34.28, "unit": "m", "source_object_ids": [], "confidence": 1.0},
+    {"id": "gt_wall_2", "category": "wall_length", "name": "Wall 2", "quantity": 5.94, "unit": "m", "source_object_ids": [], "confidence": 1.0},
+    {"id": "gt_wall_3", "category": "wall_length", "name": "Wall 3", "quantity": 5.6, "unit": "m", "source_object_ids": [], "confidence": 1.0},
+    {"id": "gt_wall_total", "category": "wall_length_total", "name": "Gross wall length", "quantity": 45.82, "unit": "m", "source_object_ids": [], "confidence": 1.0},
+    {"id": "gt_door_count", "category": "door_count", "name": "Door count", "quantity": 2.0, "unit": "count", "source_object_ids": ["gt_door_1", "gt_door_2"], "confidence": 1.0},
+    {"id": "gt_window_count", "category": "window_count", "name": "Window count", "quantity": 2.0, "unit": "count", "source_object_ids": ["gt_window_1", "gt_window_2"], "confidence": 1.0}
+  ]
+}

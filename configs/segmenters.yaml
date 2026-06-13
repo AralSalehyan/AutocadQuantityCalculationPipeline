@@ -1,0 +1,8 @@
+segformer:
+  model_path: "models/segformer/room_wall"
+  confidence_threshold: 0.25
+
+mask2former:
+  model_path: "models/mask2former/room_wall"
+  confidence_threshold: 0.25
+

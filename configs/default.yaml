@@ -1,0 +1,32 @@
+rendering:
+  pdf_dpi: 300
+
+preprocessing:
+  enabled: true
+
+tiling:
+  enabled: true
+  tile_size: 1280
+  overlap: 0.25
+
+detectors:
+  active: ["mock"]
+  fallback_to_mock: true
+
+segmenter:
+  active: "mock"
+  fallback_to_mock: true
+
+ocr:
+  enabled: false
+  engine: "tesseract"
+
+fusion:
+  bbox_iou_threshold: 0.5
+  strong_vector_confidence: 0.85
+  weak_vector_confidence: 0.60
+
+quantity:
+  default_scale_ratio: null
+  unit: "m"
+
