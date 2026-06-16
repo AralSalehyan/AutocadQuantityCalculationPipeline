@@ -1,0 +1,8 @@
+{
+  "last_epoch": 20,
+  "last_train_loss": 0.23487706537954606,
+  "target_epochs": 20,
+  "image_size": 512,
+  "batch_size": 2,
+  "learning_rate": 5e-05
+}

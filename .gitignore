@@ -17,17 +17,34 @@ logs/
 outputs/
 runs/
 
-# Datasets and trained/model artifacts are intentionally external.
-# See README.md for setup, download, and training commands.
+# Datasets and generated training artifacts stay external.
 datasets/raw/
 datasets/door_window/
 datasets/room_wall/
-models/
 *.pt
 *.pth
 *.onnx
 *.engine
 *.safetensors
+
+# Track only the current runtime checkpoints needed for the best pipeline.
+!models/
+models/*
+!models/README.md
+!models/yolo/
+models/yolo/*
+!models/yolo/door_window.pt
+!models/rtdetr/
+models/rtdetr/*
+!models/rtdetr/door_window.pt
+!models/segformer/
+models/segformer/*
+!models/segformer/room_wall/
+models/segformer/room_wall/*
+!models/segformer/room_wall/config.json
+!models/segformer/room_wall/model.safetensors
+!models/segformer/room_wall/preprocessor_config.json
+!models/segformer/room_wall/training_state.json
 
 # Keep directory placeholders if added later.
 !.gitkeep

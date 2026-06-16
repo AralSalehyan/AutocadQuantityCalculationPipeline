@@ -95,19 +95,19 @@ If you only want CPU smoke tests, normal `pip install -r requirements.txt` is en
 
 ## Required Model Files
 
-Model checkpoints are not committed to git. The runtime configs expect these paths:
+The current runtime checkpoints for the best pipeline are committed to this repository:
 
 ```text
 models/yolo/door_window.pt
 models/rtdetr/door_window.pt
-models/segformer/room_wall/
+models/segformer/room_wall/model.safetensors
+models/segformer/room_wall/config.json
+models/segformer/room_wall/preprocessor_config.json
 ```
 
-You have three options:
+After cloning and installing dependencies, these files let you run the trained pipeline without retraining. The runtime configs point to these paths by default.
 
-1. Train the models with the commands below.
-2. Copy previously trained checkpoints into those paths.
-3. Use mock mode for pipeline/UI smoke testing.
+Training artifacts, datasets, base pretrained weights, and smoke/benchmark checkpoints are still ignored by git. If you want to replace the included runtime checkpoints, train the models with the commands below or copy new checkpoints into the same paths.
 
 Mock mode does not require model files:
 
@@ -187,6 +187,8 @@ Full trained image run:
 ```powershell
 python run_pipeline.py --input sample_data/images/example.png --output outputs/full_trained --detectors yolo,rtdetr --segmenter segformer --scale 0.01 --debug
 ```
+
+This is the best current end-to-end path: YOLO and RT-DETR detect doors/windows, SegFormer segments rooms/walls, and the pipeline exports quantities, graph relationships, overlays, JSON, Excel, and a processing report.
 
 PDF run:
 
